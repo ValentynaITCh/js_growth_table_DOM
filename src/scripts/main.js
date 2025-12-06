@@ -36,7 +36,10 @@ function addColumn() {
 function removeRow() {
   const rows = field.querySelectorAll('tr');
   const tr = rows[rows.length - 1];
-  if (!tr) return;
+
+  if (!tr) {
+    return;
+  }
   tr.remove();
   updateButton();
 }
@@ -49,6 +52,7 @@ function removeColumn() {
 }
 
 appendRowButton.addEventListener('click', addRow);
+
 removeRowButton.addEventListener('click', removeRow);
 removeColumnButton.addEventListener('click', removeColumn);
 appendColumnButton.addEventListener('click', addColumn);
