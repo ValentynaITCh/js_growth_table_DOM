@@ -19,7 +19,7 @@ function updateButton() {
 }
 
 function addRow() {
-  const tr = field.querySelector('tr');
+  const tr = field.querySelector('tr:last-child');
   const trClone = tr.cloneNode(true);
 
   field.appendChild(trClone);
