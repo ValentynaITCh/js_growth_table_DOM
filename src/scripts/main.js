@@ -34,8 +34,9 @@ function addColumn() {
 }
 
 function removeRow() {
-  const tr = field.querySelector('tr');
-
+  const rows = field.querySelectorAll('tr');
+  const tr = rows[rows.length - 1];
+  if (!tr) return;
   tr.remove();
   updateButton();
 }
